@@ -8,6 +8,10 @@ public class AntiFly extends JavaPlugin{
 			getLogger().info("AntiFly 실행");
 			getLogger().info("Spigot 1.7.9 1543기반");
 			Bukkit.broadcastMessage("AntiFly플러그인 활성화");
+			//config파일 로드
+			getConfig().options().copyDefaults(true);
+			saveConfig();
+			
 		}
 
 		public void onDisable(){
