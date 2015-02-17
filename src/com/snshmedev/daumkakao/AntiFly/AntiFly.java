@@ -1,7 +1,11 @@
 package com.snshmedev.daumkakao.AntiFly;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+
 
 public class AntiFly extends JavaPlugin{
 		public void onEnable(){
@@ -11,11 +15,20 @@ public class AntiFly extends JavaPlugin{
 			//config파일 로드
 			getConfig().options().copyDefaults(true);
 			saveConfig();
-			
+			//커맨드 로드
+			getCommand("af").setExecutor(this);
 		}
 
 		public void onDisable(){
 			getLogger().info("AntiFly 비활성화");
 			Bukkit.broadcastMessage("AntiFly플러그인 비활성화");
 		}
+		//커맨드
+		public boolean onCommand(CommandSender sender, Command cmd, String Label,String[]args) {
+		  sender.sendMessage(ChatColor.AQUA + "/af add" + " - " + ChatColor.YELLOW + "해당 월드의 플라이를 차단합니다.");
+		  sender.sendMessage(ChatColor.AQUA + "/af remove" + " - " + ChatColor.YELLOW + "해당 월드의 플라이 차단을 해제합니다.");
+		  sender.sendMessage(ChatColor.AQUA + "/af list" + " - " + ChatColor.YELLOW + "플라이가 차단된 월드의 목록을 불러옵니다.");
+		  sender.sendMessage(ChatColor.AQUA + "/af reload" + " - " + ChatColor.YELLOW + "config의 월드목록을 리로딩합니다.");
+		  return true;
+		 }
 }
