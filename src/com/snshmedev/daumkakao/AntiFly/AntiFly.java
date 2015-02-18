@@ -3,7 +3,6 @@ package com.snshmedev.daumkakao.AntiFly;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
 public class AntiFly extends JavaPlugin{
 		public void onEnable(){
 			getLogger().info("AntiFly 실행");
