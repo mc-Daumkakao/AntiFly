@@ -17,7 +17,7 @@ public class AntiFly extends JavaPlugin{
 			getConfig().options().copyDefaults(true);
 			saveConfig();
 			//커맨드 로드
-			getCommand("af").setExecutor(this);
+			getCommand("af").setExecutor(new AntiFlyCommand());
 		}
 
 		public void onDisable(){
@@ -25,18 +25,5 @@ public class AntiFly extends JavaPlugin{
 			Bukkit.broadcastMessage("AntiFly플러그인 비활성화");
 		}
 		//커맨드
-		public boolean onCommand(CommandSender sender, Command cmd, String Label,String[]args) {
-			Player p = (Player) sender;
-			if(p.isOp()){
-				  sender.sendMessage(ChatColor.AQUA + "/af add" + " - " + ChatColor.YELLOW + "해당 월드의 플라이를 차단합니다.");
-				  sender.sendMessage(ChatColor.AQUA + "/af remove" + " - " + ChatColor.YELLOW + "해당 월드의 플라이 차단을 해제합니다.");
-				  sender.sendMessage(ChatColor.AQUA + "/af list" + " - " + ChatColor.YELLOW + "플라이가 차단된 월드의 목록을 불러옵니다.");
-				  sender.sendMessage(ChatColor.AQUA + "/af reload" + " - " + ChatColor.YELLOW + "config의 월드목록을 리로딩합니다.");
-				  return true;
-			}else{
-				sender.sendMessage(ChatColor.RED + "당신은 권한이 없습니다.");
-				return true;
-			}
 
-		 }
 }

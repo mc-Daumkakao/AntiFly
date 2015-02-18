@@ -4,4 +4,5 @@ version: 0.1
 commands:
   af:
       description: This is a demo command.
+      permission: 
       usage: /<command>
