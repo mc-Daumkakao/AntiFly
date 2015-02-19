@@ -1,5 +1,6 @@
 package com.snshmedev.daumkakao.AntiFly;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -42,6 +43,17 @@ public class AntiFlyCommand implements CommandExecutor{
 			}
 		}else{
 			sender.sendMessage(ChatColor.RED + "당신은 권한이 없습니다.");
+			/*
+			if(0<args.length){
+				if(args[0].equalsIgnoreCase("멍판=네로")){
+					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "멍판" + ChatColor.WHITE + ": 나는 사실 네로와 같은 사람이죠");
+					return true;
+				}else if(args[0].equalsIgnoreCase("네로=멍판")){
+					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "네로" + ChatColor.WHITE + ": 나는 사실 멍판과 같은 사람이죠");
+					return true;
+				}
+			}
+			*/
 			return true;
 		}
 		return true;
