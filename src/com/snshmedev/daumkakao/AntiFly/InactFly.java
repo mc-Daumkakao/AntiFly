@@ -1,5 +1,7 @@
 package com.snshmedev.daumkakao.AntiFly;
 
-public class InactFly {
+import org.bukkit.event.Listener;
+
+public class InactFly implements Listener{
 	
 }
