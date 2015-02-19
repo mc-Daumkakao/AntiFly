@@ -17,13 +17,15 @@ public class AntiFlyCommand implements CommandExecutor{
 					//예외처리
 					if(2<args.length || 1==args.length){
 						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
-						
-					return true;
+					}else{
+						//af add ~~를 했을 때의 로직
 					}
 				}else if(args[0].equalsIgnoreCase("remove")){
 					//예외처리
 					if(2<args.length || 1==args.length){
 						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
+					}else{
+						///af remove ~~를 했을 때의 로직
 					}
 					
 				}else if(args[0].equalsIgnoreCase("list")){
