@@ -10,12 +10,15 @@ public class AntiFly extends JavaPlugin{
 			Bukkit.broadcastMessage("AntiFly플러그인 활성화");
 			//플라이금지월드 로드
 			getConfig().options().copyDefaults(true);
+			//버전 입력
+			getConfig().addDefault("version", 0.2);
 			saveConfig();
 			//커맨드 로드
 			getCommand("af").setExecutor(new AntiFlyCommand());
 		}
 
 		public void onDisable(){
+			saveConfig();
 			getLogger().info("AntiFly 비활성화");
 			Bukkit.broadcastMessage("AntiFly플러그인 비활성화");
 		}
