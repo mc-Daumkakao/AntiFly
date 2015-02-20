@@ -1,6 +1,5 @@
 package com.snshmedev.daumkakao.AntiFly;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,6 +19,7 @@ public class AntiFlyCommand implements CommandExecutor{
 						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
 					}else{
 						//af add ~~를 했을 때의 로직
+						
 					}
 				}else if(args[0].equalsIgnoreCase("remove")){
 					//예외처리
@@ -27,12 +27,11 @@ public class AntiFlyCommand implements CommandExecutor{
 						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
 					}else{
 						///af remove ~~를 했을 때의 로직
+						
 					}
 					
 				}else if(args[0].equalsIgnoreCase("list")){
-					sender.sendMessage("/af list");
-				}else if(args[0].equalsIgnoreCase("reload")){
-					sender.sendMessage("/af reload");
+					sender.sendMessage("/af list");					
 				}else{
 				  sender.sendMessage(ChatColor.AQUA + "/af add <월드이름>" + " - " + ChatColor.YELLOW + "해당 월드의 플라이를 차단합니다.");
 				  sender.sendMessage(ChatColor.AQUA + "/af remove <월드이름>" + " - " + ChatColor.YELLOW + "해당 월드의 플라이 차단을 해제합니다.");

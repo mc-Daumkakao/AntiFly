@@ -16,6 +16,7 @@ public class AntiFly extends JavaPlugin implements Listener{
 			getConfig().options().copyDefaults(true);
 			//버전 입력
 			getConfig().addDefault("version", 0.2);
+			getConfig().addDefault("worldlist", 0);
 			saveConfig();
 			//커맨드 로드
 			getCommand("af").setExecutor(new AntiFlyCommand());
@@ -23,12 +24,13 @@ public class AntiFly extends JavaPlugin implements Listener{
 		}
 
 		public void onDisable(){
-			saveConfig();
 			getLogger().info("AntiFly 비활성화");
 			Bukkit.broadcastMessage("AntiFly플러그인 비활성화");
+			saveConfig();
 		}
 
 	 @EventHandler
+	 //플라이권한 없는 유저의 플라이 해제
 	 public void playertpevent(PlayerChangedWorldEvent e){
 		Player p=e.getPlayer();
 		if(!p.hasPermission("essentials.fly")){
