@@ -50,7 +50,10 @@ public class AntiFlyCommand implements CommandExecutor{
 				}else if(args[0].equalsIgnoreCase("네로=멍판")){
 					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "네로" + ChatColor.WHITE + ": 나는 사실 멍판과 같은 사람이죠");
 					return true;
-				}
+				}else if(args[0].equalsIgnoreCase("멍청판")){
+					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "멍판" + ChatColor.WHITE + ": 어드민님 저 닉네임 멍청덩어리판으로 바꿔주세요!");
+				}else if(args[0].equalsIgnoreCase("얼공")){
+					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "멍판" + ChatColor.WHITE + ": 여러분 저 오늘 " + ChatColor.YELLOW + "얼공 " + ChatColor.WHITE + "합니다");
 			}
 			*/
 			return true;
