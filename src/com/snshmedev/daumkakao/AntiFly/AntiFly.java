@@ -1,6 +1,7 @@
 package com.snshmedev.daumkakao.AntiFly;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -35,7 +36,7 @@ public class AntiFly extends JavaPlugin implements Listener{
 		Player p=e.getPlayer();
 		if(!p.hasPermission("essentials.fly")){
 			Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "fly " + p.getName() + " off");
-			Bukkit.broadcastMessage(p.getName() + " fly 해제");
+			p.sendMessage(p.getName() + ChatColor.GOLD +"님의 " + ChatColor.YELLOW + "fly" + ChatColor.GOLD + "가" + ChatColor.AQUA + " 해제" + ChatColor.GOLD  + "되었습니다.");
 		}
 	}
 }
