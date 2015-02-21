@@ -15,15 +15,16 @@ public class AntiFlyCommand implements CommandExecutor{
 			System.out.println("[AntiFly] 콘솔에서는 사용할 수 없습니다.");
 			return true;
 		}
+		
 		Player p = (Player) sender;
 		if(p.isOp()){
 			if(0<args.length){
 				if(args[0].equalsIgnoreCase("add")){
-					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "멍판" + ChatColor.WHITE + ": 나는 사실 네로와 같은 사람이죠");
+					Bukkit.broadcastMessage(ChatColor.AQUA + "/af add 명령어를 입력하였습니다.");
 				}else if(args[0].equalsIgnoreCase("remove")){
-					
+					Bukkit.broadcastMessage(ChatColor.AQUA + "/af remove 명령어를 입력하였습니다.");
 				}else if(args[0].equalsIgnoreCase("list")){
-					sender.sendMessage("/af list");					
+					Bukkit.broadcastMessage(ChatColor.AQUA + "/af list 명령어를 입력하였습니다.");
 				}else{
 				  sender.sendMessage(ChatColor.AQUA + "/af add <월드이름>" + " - " + ChatColor.YELLOW + "해당 월드의 플라이를 차단합니다.");
 				  sender.sendMessage(ChatColor.AQUA + "/af remove <월드이름>" + " - " + ChatColor.YELLOW + "해당 월드의 플라이 차단을 해제합니다.");
