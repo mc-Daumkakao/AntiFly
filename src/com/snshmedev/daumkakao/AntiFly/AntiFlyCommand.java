@@ -1,5 +1,6 @@
 package com.snshmedev.daumkakao.AntiFly;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,25 +11,16 @@ public class AntiFlyCommand implements CommandExecutor{
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String Label,String[]args) {
+		if(!(sender instanceof Player)) {
+			System.out.println("[AntiFly] 콘솔에서는 사용할 수 없습니다.");
+			return true;
+		}
 		Player p = (Player) sender;
 		if(p.isOp()){
 			if(0<args.length){
 				if(args[0].equalsIgnoreCase("add")){
-					//예외처리
-					if(2<args.length || 1==args.length){
-						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
-					}else{
-						//af add ~~를 했을 때의 로직
-						
-					}
+					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "멍판" + ChatColor.WHITE + ": 나는 사실 네로와 같은 사람이죠");
 				}else if(args[0].equalsIgnoreCase("remove")){
-					//예외처리
-					if(2<args.length || 1==args.length){
-						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
-					}else{
-						///af remove ~~를 했을 때의 로직
-						
-					}
 					
 				}else if(args[0].equalsIgnoreCase("list")){
 					sender.sendMessage("/af list");					
