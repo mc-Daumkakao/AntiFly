@@ -1,6 +1,5 @@
 package com.snshmedev.daumkakao.AntiFly;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,11 +14,24 @@ public class AntiFlyCommand implements CommandExecutor{
 		if(p.isOp()){
 			if(0<args.length){
 				if(args[0].equalsIgnoreCase("add")){
-					
+					//예외처리
+					if(2<args.length || 1==args.length){
+						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
+					}else{
+						//af add ~~를 했을 때의 로직
+						
+					}
 				}else if(args[0].equalsIgnoreCase("remove")){
+					//예외처리
+					if(2<args.length || 1==args.length){
+						sender.sendMessage(ChatColor.RED + "잘못된 명령어입니다.");
+					}else{
+						///af remove ~~를 했을 때의 로직
+						
+					}
 					
 				}else if(args[0].equalsIgnoreCase("list")){
-		
+					sender.sendMessage("/af list");					
 				}else{
 				  sender.sendMessage(ChatColor.AQUA + "/af add <월드이름>" + " - " + ChatColor.YELLOW + "해당 월드의 플라이를 차단합니다.");
 				  sender.sendMessage(ChatColor.AQUA + "/af remove <월드이름>" + " - " + ChatColor.YELLOW + "해당 월드의 플라이 차단을 해제합니다.");
@@ -40,7 +52,8 @@ public class AntiFlyCommand implements CommandExecutor{
 					return true;
 				}else if(args[0].equalsIgnoreCase("멍청판")){
 					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "멍판" + ChatColor.WHITE + ": 어드민님 저 닉네임 멍청덩어리판으로 바꿔주세요!");
-				}
+				}else if(args[0].equalsIgnoreCase("얼공")){
+					Bukkit.broadcastMessage(ChatColor.GRAY + "[Member]" + ChatColor.GREEN + "멍판" + ChatColor.WHITE + ": 여러분 저 오늘 " + ChatColor.YELLOW + "얼공 " + ChatColor.WHITE + "합니다");
 			}
 			*/
 			return true;
