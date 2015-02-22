@@ -10,14 +10,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class AntiFly extends JavaPlugin implements Listener{
 		public void onEnable(){
-			getLogger().info("AntiFly 실행");
 			getLogger().info("Spigot 1.7.9 1543기반");
-			Bukkit.broadcastMessage("AntiFly플러그인 활성화");
+			Bukkit.broadcastMessage("[AntiFly] AntiFly플러그인 활성화");
 			//플라이금지월드 로드
 			getConfig().options().copyDefaults(true);
 			//버전 입력
 			getConfig().addDefault("version", 0.2);
-			getConfig().addDefault("worldlist", 0);
+			getConfig().addDefault("worldlist", "a.0");
 			saveConfig();
 			//커맨드 로드
 			getCommand("af").setExecutor(new AntiFlyCommand());
@@ -25,8 +24,7 @@ public class AntiFly extends JavaPlugin implements Listener{
 		}
 
 		public void onDisable(){
-			getLogger().info("AntiFly 비활성화");
-			Bukkit.broadcastMessage("AntiFly플러그인 비활성화");
+			Bukkit.broadcastMessage("[AntiFly] AntiFly플러그인 비활성화");
 			saveConfig();
 		}
 

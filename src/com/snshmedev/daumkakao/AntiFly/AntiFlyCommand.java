@@ -21,6 +21,7 @@ public class AntiFlyCommand implements CommandExecutor{
 			if(0<args.length){
 				if(args[0].equalsIgnoreCase("add")){
 					Bukkit.broadcastMessage(ChatColor.AQUA + "/af add 명령어를 입력하였습니다.");
+					
 				}else if(args[0].equalsIgnoreCase("remove")){
 					Bukkit.broadcastMessage(ChatColor.AQUA + "/af remove 명령어를 입력하였습니다.");
 				}else if(args[0].equalsIgnoreCase("list")){
