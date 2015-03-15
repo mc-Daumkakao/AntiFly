@@ -34,7 +34,6 @@ public class AntiFly extends JavaPlugin implements Listener{
 		Player p=e.getPlayer();
 		if(!p.hasPermission("essentials.fly")){
 			Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "fly " + p.getName() + " off");
-			p.sendMessage(ChatColor.GRAY + "[알림] " + ChatColor.WHITE + p.getName() + ChatColor.GOLD +"님의 " + ChatColor.YELLOW + "fly" + ChatColor.GOLD + "가" + ChatColor.AQUA + " 해제" + ChatColor.GOLD  + "되었습니다.");
 		}
 	}
 }
