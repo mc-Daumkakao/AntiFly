@@ -1,7 +1,6 @@
 package com.snshmedev.daumkakao.AntiFly;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -32,6 +31,8 @@ public class AntiFly extends JavaPlugin implements Listener{
 	 //플라이권한 없는 유저의 플라이 해제
 	 public void playertpevent(PlayerChangedWorldEvent e){
 		Player p=e.getPlayer();
+		//ㅂㅊㅇ님이 알려준 코드 테스트중
+		p.sendMessage(p.getWorld().getName());
 		if(!p.hasPermission("essentials.fly")){
 			Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), "fly " + p.getName() + " off");
 		}
