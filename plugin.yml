@@ -1,6 +1,6 @@
 name: AntiFly
 main: com.snshmedev.daumkakao.AntiFly.AntiFly
-version: 0.2
+version: 0.5
 commands:
   af:
       description: This is a demo command.
